@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Web App</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+	
+  </head>
+  <body   style="background-image:url('/weatherbg.jpg');">
+    <div class="container" style="background-color:#9e9e9ead;">
+	<h1 class="heading">Know the current weather condition of any place.</h1>
+      <fieldset>
+        <form action="/" method="post">
+
+		 
+      <div class="input-group">
+        <input class="form-control form-control-lg" name="city" type="text"  placeholder="Enter a City Name" required>
+        <div class="input-group-prepend">
+          <div> <input class="btn btn-success" type="submit"  value="Get Weather" style="padding:11px 11px; width:300px;"></div>
+        </div>
+      </div>
+	    </form><br><br>
+      </fieldset>
+	  
+	  
+	
+	  <div class="card" disabled>
+  <div class="card-body">
+        <% if(weather !== null){ %>
+    <h5 class="card-title"><%= weather%></h5>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+  </div>
+</div><br>
+    </div>
+  </body>
+</html>
